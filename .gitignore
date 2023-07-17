@@ -1,0 +1,5 @@
+archive/
+data/
+__pycache__/
+docker-compose.yml
+build_and_push.ps1
