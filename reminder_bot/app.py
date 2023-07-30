@@ -129,6 +129,7 @@ def send_message(text: str, markdown=False) -> int:
 def process_reset(session: Session, now: str):
     if now == RESET_TIME:
         session.query(ScheduledReminder).filter(ScheduledReminder.daily == True).update({ScheduledReminder.completed : False})
+        session.commit()
 
 def main(session_maker):
     session = session_maker()
